@@ -6,8 +6,9 @@
 #define PROJECT_NAME "Function"
 
 /* Prototypes for all the test functions */
-void test_factorial(int);
-void test_prime(int);
+void test_CheckBalance();
+void test_Deposit(int);
+void test_Withdraw(int);
 
 
 /* Start of the application test */
@@ -20,8 +21,8 @@ int main() {
 /* Note: Do not edit END */
 
 /* Add your test functions in this format for testing*/
-  CU_add_test(suite, "factorial_func", test_factorial);
-  CU_add_test(suite, "prime_func", test_prme);
+  CU_add_test(suite, "Deposit", test_Deposit);
+  CU_add_test(suite, "Withdraw", Withdraw);
 
 
 /* Note: Do not edit START*/
@@ -37,23 +38,23 @@ int main() {
   return 0;
 }
 /* Write all the test functions */
-void test_factorial(int) {
-  CU_ASSERT(3628800 == factorial_func(10));
-  CU_ASSERT(40320 == factorial_func(8));
-  CU_ASSERT(6 == factorial_func(3));
-  CU_ASSERT(5040 == factorial_func(7));
-  CU_ASSERT(720 == factorial_func(6));
+void test_Deposit(int) {
+  CU_ASSERT(1000 == Deposit(1000));
+  CU_ASSERT(2000 == Deposit(2000));
+  CU_ASSERT(3000== Deposit(3000));
+  CU_ASSERT(4000 == Deposit(4000));
+  CU_ASSERT(5000 == Deposit(5000));
 
   /* Dummy fail*/
-  CU_ASSERT(100 == factorial_func(5));
+  CU_ASSERT(50 == Deposit(500));
 }
 
-void test_prime(int) {
-  CU_ASSERT(1 == prime_func(7));
-  CU_ASSERT(0 == prime_func(52));
-  CU_ASSERT(1 == prime_func(3));
-  CU_ASSERT(0 == prime_func(12));
+void test_Withdraw(int) {
+  CU_ASSERT(700 == Withdraw(700));
+  CU_ASSERT(300 == Withdraw(300));
+  CU_ASSERT(200 == Withdraw(200));
+  CU_ASSERT(100 == Withdraw(100));
 
   /* Dummy fail*/
-  CU_ASSERT(0 == prime_func(6));
+  CU_ASSERT(0 == Withdraw(6));
 }

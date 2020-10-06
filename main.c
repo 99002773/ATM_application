@@ -1,48 +1,41 @@
 #include<function.h>
 
-int main()
-{
-int choice,fibonacci_limit,factorial_input,factorial_output,prime_input,prime_output;
-printf("From the below option choose the mathematical operation you need to perform\n");
-printf("1.Fibonacci series\n");
-printf("2.Find factorial of the number\n");
-printf("3.Check whether the number is prime or not.\n");
-printf("\n Enter your choice - ");
-scanf("%d",&choice);
-switch(choice)
+int main(void) {
+    int choice;
+    int deposit_amount=0;
+    int withdraw_amount=0;
+		int dep_amount=0;
+    int with_amount=0;
+     while(1)
     {
-        case 1:
-            printf("\n----------------------\n");
-            printf("\nEnter fibonacci limit\n");
-            scanf("%d",&fibonacci_limit);
-            fibonacci_func(fibonacci_limit);
-            break;
+    printf("Please Enter Your Choice\n");
+    printf("1.Check Your Balance \n");
+    printf("2.Deposit\n");
+    printf("3.Withdraw\n");
+    printf("4.Close_Transaction\n");
+    scanf("%d",&choice);
 
-        case 2:
-            printf("\n----------------------\n");
-            printf("\nEnter the number to know factorial\n");
-            scanf("%d",&factorial_input);
-            factorial_output = factorial_func(factorial_input);
-            printf("The factorial is %d",factorial_output);
-            break;
-
-        case 3:
-            printf("\n----------------------\n");
-            printf("\nEnter the number to know whether its prime or not.\n");
-            scanf("%d",&prime_input);
-            prime_output = prime_func(prime_input);
-            if(prime_output==1)
-            {
-                printf("\nIt's a prime number\n");
-            }
-            else
-            {
-                printf("\nIt's not a prime number");
-            }
-            break;
-        default:
-            printf("\nPlease choose the correct option\n");
-            break;
+   
+    switch(choice)
+    {
+        case 1:CheckBalance();
+               break;
+        case 2: printf("Please enter your amount: \n");
+    						scanf("%d",&deposit_amount);
+								dep_amount=Deposit(deposit_amount);
+								printf("Your account balance \n");
+    						printf("%d",amount);
+                             break;
+        case 3: printf("Please enter your withdraw amount\n");
+    						scanf("%d",&withdraw_amount);
+								with_amount=Withdraw();
+								printf("Your account balance \n");
+    						printf("%d",amount);
+                            break;
+        case 4: printf("Thank you for your transaction");
+                        exit(0);
+        default:printf("Please Enter Correct Choice \n");
+                break;
     }
-
-}
+         
+  }

@@ -3,8 +3,8 @@
 
 #include <stdio.h>
 
-void fibonacci_func(int fibonacci_limit);
-int factorial_func(int factorial_input);
-int prime_func(int prime_input);
+void CheckBalance();
+int Deposit(int);
+int Withdraw(int);
 
 #endif

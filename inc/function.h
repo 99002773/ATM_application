@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void CheckBalance();
+int CheckBalance();
 int Deposit(int);
 int Withdraw(int);
 int amount=0;

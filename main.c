@@ -1,10 +1,11 @@
 #include<function.h>
 
-int main(void) {
+int main() {
     int choice;
     int deposit_amount=0;
     int withdraw_amount=0;
-		int dep_amount=0;
+    int bal=0
+    int dep_amount=0;
     int with_amount=0;
      while(1)
     {
@@ -18,22 +19,25 @@ int main(void) {
    
     switch(choice)
     {
-        case 1:CheckBalance();
+        case 1:bal=CheckBalance();
+	       printf("Your Amount : ");
+               printf("%d",bal);
+               printf("\n");
                break;
-        case 2: printf("Please enter your amount: \n");
-    						scanf("%d",&deposit_amount);
-								dep_amount=Deposit(deposit_amount);
-								printf("Your account balance \n");
-    						printf("%d",amount);
-                             break;
+        case 2:printf("Please enter your amount: \n");
+    	       scanf("%d",&deposit_amount);
+	       dep_amount=Deposit(deposit_amount);
+		printf("Your account balance \n");
+    		printf("%d",amount);
+                break;
         case 3: printf("Please enter your withdraw amount\n");
-    						scanf("%d",&withdraw_amount);
-								with_amount=Withdraw();
-								printf("Your account balance \n");
-    						printf("%d",amount);
-                            break;
+    		scanf("%d",&withdraw_amount);
+		with_amount=Withdraw(withdraw_amount);
+		printf("Your account balance \n");
+    		printf("%d",amount);
+                break;
         case 4: printf("Thank you for your transaction");
-                        exit(0);
+                exit(0);
         default:printf("Please Enter Correct Choice \n");
                 break;
     }

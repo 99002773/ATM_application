@@ -1,11 +1,9 @@
 #include<function.h>
 
-void CheckBalance()
+int CheckBalance()
 {
     
-    printf("Your Amount : ");
-    printf("%d",amount);
-    printf("\n");
+   return amount;
     
 }
 

@@ -22,7 +22,7 @@ int main() {
 
 /* Add your test functions in this format for testing*/
   CU_add_test(suite, "Deposit", test_Deposit);
-  CU_add_test(suite, "Withdraw", Withdraw);
+  CU_add_test(suite, "Withdraw", test_Withdraw);
 
 
 /* Note: Do not edit START*/
